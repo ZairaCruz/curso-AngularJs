@@ -27,6 +27,20 @@
                         src:['app/**/*.js', '!app/**/my-app.js'],
                         title: 'Docs'
                     }
+                },
+                watch: {
+                    files: ['app/less/*.less'],
+                    tasks: ['less']
+                },
+                less: {
+                    app: {
+                        options:{
+                            compress: false
+                        },
+                        files: {
+                            'app/css/curso-angular.css': 'app/less/curso-angular.less'
+                        }
+                    }
                 }
 
             });
@@ -34,6 +48,10 @@
             //Carrega o plugin que fornece a tareda de "uglify" mimificação
             //Necessário somente se não estiver utilizando o matchdep
            // grunt.loadNpmTasks('grunt-contrib-uglify');
+
+           //Tarefa default
+            grunt.registerTask("default", ['watch']);
+        
 
             //Tarefa de minificar
             grunt.registerTask("minificar", ['uglify']);

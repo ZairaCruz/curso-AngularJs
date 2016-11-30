@@ -2,7 +2,10 @@ angular.module('MyApp')
     .controller('IndexController', IndexController);
 
 /* @Inject */
-function IndexController($rootScope, $scope, $timeout, $filter, SenaiSecurityService) {
+function IndexController($rootScope, $scope, $timeout, $filter, SenaiSecurityService, _) {
+    
+    console.log(_.join(['a', 'b', 'c'], '-'));
+    
     var vm = this;
 
     vm.variavelTeste = 'IndexController';

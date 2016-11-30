@@ -1,0 +1,23 @@
+@import '../../bower_components/bootstrap/less/bootstrap.less';
+@import 'elements.less';
+
+/* Mixin */
+.border-radius(@radius: 5px){
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+#minhadiv{
+   .border-radius(20px);
+}
+#outradiv{
+    .border-radius();
+}
+
+.class1{
+    background-color: @color-base;
+    .class2{
+        background-color: #fff;
+        color: @color-base;
+    }
+}
