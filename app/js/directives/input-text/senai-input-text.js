@@ -1,3 +1,16 @@
+/**
+ * @ngdoc directive
+ * @name global.diirective: senaiInputText
+ * @scope
+ * @restrict E
+ * 
+ * @description
+ * Diretiva que permite criar um campo de texto no padão bootstrap.
+ * 
+ * @param { object } ngModel Modelo que será alterado pelo input.
+ * @param { String } preffix Prefixo que ficara a esquerda do input.
+ * 
+ */
 (function () {
     'use strict';
 

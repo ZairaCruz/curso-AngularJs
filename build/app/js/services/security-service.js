@@ -1,0 +1,1 @@
+function SenaiSecurityService(a,b){function c(c){"usuario"===c.login&&"1234"===c.password?a(function(){e=c,b.showOk("Login realizado com sucesso!")},3e3):b.showError("Acesso negado!")}function d(){return e}var e=null;this.doLogin=c,this.getLoggedUser=d}angular.module("MyApp").service("SenaiSecurityService",SenaiSecurityService);

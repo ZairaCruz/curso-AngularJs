@@ -8,7 +8,7 @@
         return{
             restrict: 'EA',
             template: '<button ng-click="vm.addItem()"></button>'
-            + '<ul><li ng-repeat="item in vm.items" ng-bind="item.name"></li></ul>'
+            + '<ul><li ng-repeat="item in vm.items" ng-bind="item.name"></li></ul>',
             scope:{
                 provider:'',
                 add: '&'

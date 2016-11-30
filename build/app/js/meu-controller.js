@@ -1,0 +1,1 @@
+!function(){"use strict";function a(a,b){function c(){console.log("Meu Controller iniciado!")}function d(){return b.getLoggedUser()}var e=this;e.variavelTeste="MeuController",e.nomePagina="Página Meu Controller",e.getLoggedUser=d,c()}angular.module("MyApp").controller("MeuController",a),a.$inject=["$scope","SenaiSecurityService"]}();

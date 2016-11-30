@@ -1,0 +1,1 @@
+function SenaiAlertService(a,b){function c(b){a.success(b)}function d(b){a.warning(b)}this.showOk=c,this.showError=d}angular.module("MyApp").service("SenaiAlertService",SenaiAlertService);

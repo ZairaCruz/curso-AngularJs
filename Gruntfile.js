@@ -7,17 +7,25 @@
 
             // Configuração do projeto
             grunt.initConfig({
+                pkg: grunt.file.readJSON('package.json'),
                 uglify:{
-                    diretivas:{
+                   build:{
                         expand: true,
-                        src:'app/js/directives/**/*.js',
-                        dest:'build/directives'
+                        src:'app/**/*.js',
+                        dest:'build'
+                    }
+                },
+                ngdocs:{
+                    options:{
+                        dest: 'docs',
+                        html5Mode: false,
+                        scripts:[
+                            'bower_components/angular/angular.js'
+                        ]
                     },
-                    filtros:{
-
-                    },
-                    services:{
-
+                    api:{
+                        src:['app/**/*.js', '!app/**/my-app.js'],
+                        title: 'Docs'
                     }
                 }
 
@@ -28,6 +36,11 @@
            // grunt.loadNpmTasks('grunt-contrib-uglify');
 
             //Tarefa de minificar
-            grunt.registerTsk("minificar", ['uglify:diretivas', 'uglify:services']);
+            grunt.registerTask("minificar", ['uglify']);
+
+            //Tarefa de documentar
+            grunt.registerTask("gerardocs", ['ngdocs']);
     };
+
+    
 })();

@@ -1,0 +1,1 @@
+function config(a,b){a.globalTimeToLive({success:1e3,warning:b,error:-1,info:4e3})}angular.module("MyApp",["ngMessages","angular-growl","SenaiUppercaseParserDirective","SenaiInputTextDirective"]).constant("TTL_WARNING",6e3).value("MeuValor",200).config(config);
