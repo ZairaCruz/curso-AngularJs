@@ -2,8 +2,9 @@ angular.module('MyApp')
     .controller('IndexController', IndexController);
 
 /* @Inject */
-function IndexController($rootScope, $scope, $timeout, $filter, SenaiSecurityService, _) {
+function IndexController($rootScope, $scope, $timeout, $filter, SenaiSecurityService, _, PessoaService){
     
+    console.log(PessoaService.obterListaPessoas)
     console.log(_.join(['a', 'b', 'c'], '-'));
     
     var vm = this;

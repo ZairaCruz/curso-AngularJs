@@ -41,6 +41,19 @@
                             'app/css/curso-angular.css': 'app/less/curso-angular.less'
                         }
                     }
+                },
+                postcss: {
+                    options: {
+                        map: true,
+                        processors: [
+                             require('autoprefixer')({
+                                browsers: ['last 2 version']
+                            })
+                        ]
+                    },
+                    app: {
+                        src: 'app/css/*.css'
+                    }
                 }
 
             });
